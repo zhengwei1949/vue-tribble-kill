@@ -8,11 +8,11 @@ console.log(process.env.VUE_APP_URL)
 axios.defaults.baseURL = process.env.VUE_APP_URL;//设置axios默认请求路径，其他process.env.VUR_APP_URL保存的是开发这个项目时的默认路径，参考https://cli.vuejs.org/guide/mode-and-env.html#modes
 Vue.config.productionTip = false
 
-Vue.directive('rainbow',{
-  bind(el,binding,vnode){
-    el.style.color = '#'+Math.random().toString(16).slice(2,8)
-  }
-})
+// Vue.directive('rainbow',{
+//   bind(el,binding,vnode){
+//     el.style.color = '#'+Math.random().toString(16).slice(2,8)
+//   }
+// })
 
 Vue.directive('theme',{
   bind(el,binding,vnode){
@@ -21,7 +21,7 @@ Vue.directive('theme',{
   }
 })
 
-Vue.filter('to-uppercase',value=>value.toUpperCase())
+// Vue.filter('to-uppercase',value=>value.toUpperCase())
 Vue.filter('snippet',value=>value.slice(0,100)+'...')
 new Vue({
   router,
